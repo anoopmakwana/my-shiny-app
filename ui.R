@@ -20,7 +20,10 @@ shinyUI(fluidPage(
                     selected = 1),
         sliderInput("logLamda", "Log(Lamda)", min = 0, max = 15, value = 4),
         hr(),
-        p(strong(em("Documentation:",a("Body Mass Index Classification in Adults",href="READMe.html")))),
+        h4("Instructions:"),
+        p("This is a Shiny application that demonstrates the impact of regularization in linear regression. User can change the regularization from the drop down menu to either Ridge or Lasso Regression. Lamda value for each regularization can also be adjusted from the slider input. Based on the selected regression, and lambda value, values of coefficient for each predictor along with RMSE is also shown. "),
+        p("During Regularization, the penalties are put on the RSS of the coefficients and it is controlled by lambda. Thus, if lambda is big, we want sum of squares of the coefficients to be small, ie shrinking the coefficients towards zero"),
+        p("The plot of cv shows the cross-validated MSE mean squared error as a function of log(lambda). At the start, when lambda is big, coefficients are restricted to be very small, MSE is big. Later and towards the end, when lambda is very small and coefficients are big, MSE becomes small and stays flat"),
         p(strong(em("Github repository:",a("My Shiny App",href="https://github.com/anoopmakwana/my-shiny-app"))))
     ),
     
