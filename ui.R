@@ -21,14 +21,14 @@ shinyUI(fluidPage(
         sliderInput("logLamda", "Log(Lamda)", min = 0, max = 15, value = 4),
         hr(),
         p(strong(em("Documentation:",a("Body Mass Index Classification in Adults",href="READMe.html")))),
-        p(strong(em("Github repository:",a("Developing Data Products - Peer Assessment Project; Shiny App",href="https://github.com/CrazyFarang/DevelopingDataProducts"))))
+        p(strong(em("Github repository:",a("My Shiny App",href="https://github.com/anoopmakwana/my-shiny-app"))))
     ),
     
     mainPanel(
        h4("Shrinking of coefficient"),
-       fluidRow(splitLayout(cellWidths = c("65%", "35%"), plotOutput("plot1"), verbatimTextOutput("coeff"))),
+       fluidRow(splitLayout(cellWidths = c("65%", "30%"), plotOutput("plot1"), verbatimTextOutput("coeff"))),
        h4("Mean Squared Error Vs Lambda"),
-       fluidRow(splitLayout(cellWidths = c("65%", "35%"), plotOutput("plot2")))
+       fluidRow(splitLayout(cellWidths = c("65%", "30%"), plotOutput("plot2")))
     )
   )
 ))

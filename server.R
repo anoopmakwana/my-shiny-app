@@ -71,9 +71,9 @@ shinyServer(function(input, output, session) {
         reg <- as.numeric(input$regularization)
         # Control the value, min, max, and step.
         if (reg == 1) {
-            updateSliderInput(session, "logLamda", min = 3.5, max = 12.5, value = 4, step = 0.1)
+            updateSliderInput(session, "logLamda", min = 3.5, max = 12.5, value = 3.5, step = 0.1)
         } else {
-            updateSliderInput(session, "logLamda", min = -2.5, max = 5.5, value = 4, step = 0.1)
+            updateSliderInput(session, "logLamda", min = -2.5, max = 5.5, value = -2.5, step = 0.1)
         }
     })
     
